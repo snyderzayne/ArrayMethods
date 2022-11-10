@@ -69,9 +69,9 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
-function hasCertainKey(arr, key) {
-    arr.every
-}
+// function hasCertainKey(arr, key) {
+//     arr.every(e => )
+// }
 
 /*
 Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.

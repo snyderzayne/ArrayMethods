@@ -70,7 +70,17 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-
+    let obj = {};
+    Array.from(str).map( char => {
+        if ('aeiou'.includes(char.toLowerCase())) {
+            if (Object.keys(obj).includes(char.toLowerCase())) {
+                obj[char]++
+            } else {
+                obj[char] = 1
+            }
+        }
+    }) 
+    return obj;
 }
 
 /*
@@ -127,8 +137,7 @@ Examples:
 */
 
 function extractFullName(arr){
-    let result = arr.map(e => e.first + ' ' + e.last);
-    return result;
+    return arr.map(e => e.first + ' ' + e.last);
 }
 
 /*
@@ -139,9 +148,7 @@ Examples:
 */
 
 function filterByValue(arr, key) {
-    arr.filter( e => {
-        return arr[e] === arr[key];
-    })
+    return arr.filter( obj => Object.keys(obj).includes(key));
 }
 /*
 Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.
@@ -152,7 +159,7 @@ Examples:
 */
 
 function find(arr, searchValue) {
-    arr
+    
 }
 
 /*
@@ -163,7 +170,7 @@ Examples:
 */
 
 function findInObj(arr, key, searchValue) {
-
+    return arr.find( obj => obj[key] === searchValue);
 }
 
 /*
